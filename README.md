@@ -13,6 +13,8 @@ The **Track App** is a application designed to help users track their goals and 
 
 ## Installation
 
+You can view the live demo on [GitHub Pages](https://gijs-d.github.io/Track-App/).
+
 To run the Track App locally, follow these steps:
 
 1. Clone the repository:
@@ -52,7 +54,7 @@ To install and use the Track App on your Android device, follow these steps:
 -   **Editing Goals**: Click the edit button next to a goal to modify its details.
 -   **Deleting Goals**: Use the delete button to remove a goal from the list.
 
-## Usage
+## Screenshots
 
 ![add](./screenshots/add.gif)
 ![theme](./screenshots/theme.gif)
