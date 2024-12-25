@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Track</title>
+        <link rel="shortcut icon" href="assets/media/logo.svg" />
+        <link rel="stylesheet" href="assets/css/style.css" />
+    </head>
+
+    <body>
+        <section class="menuSection">
+            <input type="button" id="menuBtn" value="" />
+        </section>
+        <main id="mainpage">
+            <section id="start" class="track">
+                <div class="title">
+                    <h2>Start</h2>
+                    <input type="button" value="+" class="add" />
+                    <form class="hidden">
+                        <h3>Add</h3>
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" required />
+                        <label for="weekly2" class="checkbox">Weekly</label>
+                        <input type="checkbox" id="weekly2" />
+                        <label for="changeLim2" class="checkbox">Change limit for goal</label>
+                        <input type="checkbox" id="changeLim2" />
+                        <div id="daylyDiv" class="daily nChangeLim">
+                            <label for="amountDaily">Amount / Day</label>
+                            <input
+                                type="number"
+                                name="amountDaily"
+                                id="amountDaily"
+                                min="0"
+                                required
+                            />
+                        </div>
+                        <div id="weeklyDiv" class="hidden weekly nChangeLim">
+                            <label for="amountWeekly">Amount / Week</label>
+                            <input type="number" name="amountWeekly" id="amountWeekly" min="0" />
+                        </div>
+                        <div id="daylyChange" class="hidden daily changeLim">
+                            <label for="amountDaily">Current amount / Day</label>
+                            <input type="number" name="amountDaily" id="amountDaily" min="0" />
+                            <label for="maxDayTarget">Goal amount / Day</label>
+                            <input type="number" name="maxDayTarget" id="maxDayTarget" min="0" />
+                            <label for="targetDay">Goal on</label>
+                            <input type="date" name="targetDay" id="targetDay" />
+                        </div>
+                        <div id="weeklyChange" class="hidden weekly changeLim">
+                            <label for="amountWeekly">Current amount / Week</label>
+                            <input type="number" name="amountWeekly" id="amountWeekly" min="0" />
+                            <label for="maxWeekTarget">Goal amount / Week</label>
+                            <input type="number" name="maxWeekTarget" id="maxWeekTarget" min="0" />
+                            <label for="targetDay">Goal on</label>
+                            <input type="date" name="targetDay" id="targetDay" />
+                        </div>
+                        <input type="button" value="Cancel" class="cancel" />
+                        <input type="submit" value="Add" />
+                    </form>
+                </div>
+                <ul></ul>
+            </section>
+            <section id="stop" class="track">
+                <div class="title">
+                    <h2>Stop</h2>
+                    <input type="button" value="+" class="add" />
+                    <form class="hidden">
+                        <h3>Add</h3>
+                        <label for="title">Title</label>
+                        <input type="text" name="title" id="title" required />
+                        <label for="weekly" class="checkbox">Weekly</label>
+                        <input type="checkbox" id="weekly" />
+                        <label for="changeLim" class="checkbox">Change limit for goal</label>
+                        <input type="checkbox" id="changeLim" />
+                        <div id="daylyDiv" class="daily nChangeLim">
+                            <label for="amountDaily">Limit / Day</label>
+                            <input
+                                type="number"
+                                name="amountDaily"
+                                id="amountDaily"
+                                min="0"
+                                required
+                            />
+                        </div>
+                        <div id="weeklyDiv" class="hidden weekly nChangeLim">
+                            <label for="amountWeekly">Limit / Week</label>
+                            <input type="number" name="amountWeekly" id="amountWeekly" min="0" />
+                        </div>
+                        <div id="daylyChange" class="hidden daily changeLim">
+                            <label for="amountDaily">Current limit / Day</label>
+                            <input type="number" name="amountDaily" id="amountDaily" min="0" />
+                            <label for="maxDayTarget">Goal limit / Day</label>
+                            <input type="number" name="maxDayTarget" id="maxDayTarget" min="0" />
+                            <label for="targetDay">Goal on</label>
+                            <input type="date" name="targetDay" id="targetDay" />
+                        </div>
+                        <div id="weeklyChange" class="hidden weekly changeLim">
+                            <label for="amountWeekly">Current limit / Week</label>
+                            <input type="number" name="amountWeekly" id="amountWeekly" min="0" />
+                            <label for="maxWeekTarget">Goal limit / Week</label>
+                            <input type="number" name="maxWeekTarget" id="maxWeekTarget" min="0" />
+                            <label for="targetDay">Goal on</label>
+                            <input type="date" name="targetDay" id="targetDay" />
+                        </div>
+                        <input type="button" value="Cancel" class="cancel" />
+                        <input type="submit" value="Add" />
+                    </form>
+                </div>
+                <ul></ul>
+            </section>
+        </main>
+        <script></script>
+        <script src="assets/js/db.js"></script>
+        <script src="assets/js/script.js"></script>
+    </body>
+</html>

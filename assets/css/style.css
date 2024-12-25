@@ -1,0 +1,336 @@
+:root {
+    --background-color: black;
+    --background-color-dark: black;
+    --background-color-light: white;
+    --invert: 100%;
+    --invert-dark: 100%;
+    --invert-light: 0%;
+    --shadow: white;
+    --shadow-dark: white;
+    --shadow-light: grey;
+    --text-color: white;
+    --text-color-dark: white;
+    --text-color-light: black;
+    --toggle-img: url('../media/icons/icon-sun.svg');
+    --toggle-img-dark: url('../media/icons/icon-sun.svg');
+    --toggle-img-light: url('../media/icons/icon-moon.svg');
+}
+
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
+    background-color: var(--background-color);
+    min-height: 100%;
+}
+
+body * {
+    background-color: transparent;
+    color: var(--text-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+main section.track div.title {
+    align-items: center;
+    display: flex;
+    padding: 5px;
+    position: relative;
+}
+
+main section.track div.title div.formAnker {
+    display: inline-block;
+    height: 2rem;
+    position: relative;
+}
+
+main section.track div.title input {
+    transition: transform 0.5s;
+}
+
+main section.track div.title input.add {
+    border: 1px solid var(--shadow);
+    border-radius: 100%;
+    font-size: 1.2rem;
+    height: 2rem;
+    line-height: 0;
+    margin-left: 10px;
+    width: 2rem;
+}
+
+main section.track div.title input:hover {
+    box-shadow: 0 0 15px var(--shadow);
+    transform: scale(1.1);
+}
+
+main section.track ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    padding: 10px;
+}
+
+main section.track ul li {
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--shadow);
+    box-sizing: border-box;
+    display: inline-block;
+    flex-grow: 1;
+    list-style: none;
+    margin: 10px;
+    max-width: 512px;
+    min-width: 256px;
+    padding: 10px;
+    position: relative;
+    width: 256px;
+}
+
+main section.track ul li div.stats {
+    padding-left: 10px;
+}
+
+main section.track ul li div.title h3 {
+    display: inline-block;
+    line-break: auto;
+    margin: 0;
+    max-width: 50%;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+main section.track ul li div.stats p {
+    margin: 5px;
+}
+
+main section.track ul li div.stats div.last {
+    display: flex;
+    justify-content: space-evenly;
+}
+
+main section.track ul li div.title div.addCountBtn {
+    display: block;
+    margin-left: 10px;
+    position: relative;
+}
+
+main section.track ul li div.title div.editBtn {
+    display: flex;
+    margin-left: auto;
+}
+
+main section.track ul li div.stats div.last div {
+    margin: 0 10px;
+}
+
+main section.track ul li div.stats div.last div p {
+    margin: 5px;
+}
+
+main section.track ul li div.stats div.last div span.wrap {
+    display: inline-block;
+}
+
+main section.track ul li div.title div.addCountBtn form {
+    display: none;
+    left: unset;
+    right: -50%;
+    top: 100%;
+    width: 150px;
+}
+
+main section.track ul li div.title div.editBtn form {
+    display: none;
+    left: unset;
+    right: 30px;
+    top: 35px;
+    width: 180px;
+}
+
+main section.track ul li div.title div.addCountBtn form.showCountForm,
+main section.track ul li div.title div.editBtn form.showCountForm {
+    display: flex;
+}
+
+main section.track ul li div.title input.addCount {
+    border: 1px solid var(--shadow);
+    border-radius: 100%;
+    font-size: 1.2rem;
+    height: 2rem;
+    line-height: 0;
+    width: 2rem;
+}
+
+main section.track ul li div.title input.edit {
+    background: no-repeat url('../media/icons/icon-edit2.svg') center center;
+    background-size: 70%;
+    border: none;
+    border-radius: 5px;
+    box-shadow: none;
+    filter: invert(var(--invert));
+    height: 2rem;
+    margin-left: 10px;
+    transition: transform 0.5s;
+    width: 2rem;
+}
+
+main section.track ul li div.title input.edit:hover {
+    transform: scale(1.2);
+}
+
+main section.track form {
+    background-color: var(--background-color);
+    border-radius: 15px;
+    box-shadow: 0 0 15px var(--shadow);
+    display: flex;
+    flex-wrap: wrap;
+    left: 15px;
+    padding: 20px;
+    position: absolute;
+    top: 70%;
+    width: 200px;
+    z-index: 2;
+}
+
+main section.track form h3 {
+    margin: 0;
+    text-align: center;
+    width: 100%;
+}
+
+main section.track form div {
+    box-sizing: border-box;
+    margin: 0;
+    width: 100%;
+}
+
+main section.track form input,
+main section.track form label {
+    box-sizing: border-box;
+    display: inline-block;
+    margin: 0;
+    width: 100%;
+}
+
+main section.track form input.deleteLast {
+    margin-bottom: 0px;
+    margin-top: 0px;
+}
+
+main section.track form input[type='button'],
+main section.track form input[type='date'],
+main section.track form input[type='datetime-local'],
+main section.track form input[type='number'],
+main section.track form input[type='submit'],
+main section.track form input[type='text'] {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 0 5px var(--shadow);
+    margin: 5px 0;
+    padding: 10px;
+}
+
+main section.track form input[type='button'],
+main section.track form input[type='submit'] {
+    margin: 15px auto;
+    width: 90%;
+}
+
+main section.track form input[type='checkbox'] {
+    height: 20px;
+    margin: auto;
+    padding: 0;
+    width: 30px;
+}
+
+main section.track form input[type='submit'] {
+    margin: 0 auto;
+}
+
+main section.track form label {
+    margin-top: 15px;
+}
+
+main section.track form label.checkbox {
+    margin: 7.5px 0;
+    width: 70%;
+}
+
+main section.track form label:first-child {
+    margin-top: 0;
+}
+
+main section.track input.delete {
+    background: no-repeat url('../media/icons/icon-bin.svg') center center;
+    background-size: 70%;
+    border: none;
+    box-shadow: none;
+    height: 2rem;
+    left: 5px;
+    margin-left: 10px;
+    margin-top: 0;
+    top: 5px;
+    transition: transform 0.5s;
+    width: 2rem;
+}
+
+main section.track input.delete:hover {
+    box-shadow: none !important;
+    filter: drop-shadow(0 0 15px red);
+    transform: scale(1.2);
+}
+
+p {
+    font-size: 1rem;
+}
+
+.addTime {
+    display: none;
+}
+
+.addTime.show {
+    display: unset;
+}
+
+.hidden {
+    display: none !important;
+}
+
+.menuSection {
+    align-items: center;
+    display: flex;
+    height: 100%;
+    justify-content: center;
+}
+
+.menuSection #menuBtn {
+    background: no-repeat var(--toggle-img) center center;
+    background-size: contain;
+    border: none;
+    filter: invert(var(--invert));
+    height: 40px;
+    padding: 0;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    transition: transform 0.5s;
+    width: 40px;
+    z-index: 3;
+}
+
+.menuSection #menuBtn:hover {
+    transform: scale(1.1);
+}
+
+.menuSection.menuSection {
+    width: 50px;
+}
